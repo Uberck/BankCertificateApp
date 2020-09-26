@@ -1,4 +1,4 @@
-#include "BankCertificate.h"
+/*#include "BankCertificate.h"
 
 void CDAccount::calcInterest() {
     acctInterest_ = acctInterest_ / 100;
@@ -6,5 +6,7 @@ void CDAccount::calcInterest() {
     interest = acctBalance_ * acctInterest_ * acctMaturity_;    // Equation to calculate interest
     balance = acctBalance_ + interest;                          // Calculates total balance
     cout << "When your CD matures in " << acctMaturity_ * 12 << " months, account #" << acctNumber_ <<
-        " will have a balance of $" << balance << ".";
+        " will have a balance of $" << balance << "." << endl;
 }
+
+*/

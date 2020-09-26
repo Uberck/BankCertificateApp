@@ -9,48 +9,42 @@ using namespace std;
 class CDAccount {
 
 private:
-    float acctNumber_, acctBalance_, acctInterest_, acctMaturity_;
-    double interest, balance;
+    string acctNumber;
+    const double balance, interestRate, maturityMonths;
+
 public:
-    CDAccount(float& acctNumber, float& acctBalance, float& acctInterest, float& acctMaturity) :
-        acctNumber_(acctNumber), acctBalance_(acctBalance), acctInterest_(acctInterest), acctMaturity_(acctMaturity), interest(0.0), balance(0.0) {}~CDAccount() =
-        default;
+    CDAccount(string& acctNumber_, double& balance_, double& interestRate_, double& maturityMonths_) :
+        acctNumber(acctNumber_), 
+        balance(balance_),
+        interestRate(interestRate_),
+        maturityMonths(maturityMonths_)
+    {
+    }
+    ~CDAccount() = default;
 
-    // Getter functions for the 4 properties
-    float getAcctNumber() {
-        return acctNumber_;
+    double balanceAtMaturity() {
+        // balance * rate * term/12.0
+        
+        return balance * interestRate * maturityMonths / 12;
     }
 
-    float getAcctBalance() {
-        return acctBalance_;
+    // Get functions for the 4 properties
+    string getAcctNumber() {
+        return acctNumber;
     }
 
-    float getAcctInterest() {
-        return acctInterest_;
+    double getBalance() {
+        return balance;
     }
 
-    float getAcctMaturity() {
-        return acctMaturity_;
+    double getInterestRate() {
+        return interestRate;
     }
 
-    // Setter functions for the 4 properties
-    void setAcctNumber(const float& an) {
-        acctNumber_ = an;
+    double getMaturityMonths() {
+        return maturityMonths;
     }
 
-    void setAcctBalance(const float& ab) {
-        acctBalance_ = ab;
-    }
-
-    void setAcctInterest(const float& ai) {
-        acctInterest_ = ai;
-    }
-
-    void setAcctMaturity(const float& am) {
-        acctMaturity_ = am;
-    }
-
-    void calcInterest();
 };
 
 #endif
