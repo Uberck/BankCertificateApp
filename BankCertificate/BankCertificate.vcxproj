@@ -141,7 +141,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Driver.cpp" />
+    <ClCompile Include="BankCertificate.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BankCertificate.h" />
