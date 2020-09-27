@@ -23,7 +23,7 @@ int main()
 		// Loop
 		cout << "Please enter your account number: ";
 		cin >> acctNumber;	// Store account balance input
-		cout << "Account # entered:[" << acctNumber << "]" << endl << endl;
+		cout << "Account # entered:[" << acctNumber << "]" << endl << endl; // Verification
 		if (!isAllDigits(acctNumber))
 		{
 			cout << "Account number must only contain digits." << endl;
@@ -135,6 +135,7 @@ int main()
 	interest = acctBalance * acctInterest * acctMaturity; // Equation to calculate interest
 	balance = acctBalance + interest; // Calculates total balance
 
+	// Print results
 	cout << "When your CD matures in " << acctMaturity * 12 << " months, account #" << acctNumber << " will have a balance of $" << balance << endl << endl;
 	system("pause");	// Pause the window
 	return 0;
