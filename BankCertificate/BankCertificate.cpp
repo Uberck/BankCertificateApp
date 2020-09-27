@@ -130,7 +130,7 @@ int main()
 	cout << "Interest Rate:       " << cd.getInterestRate() << "%" << endl;
 	cout << "Term:                " << cd.getMaturityMonths() << " months." << endl << endl;
 
-	acctInterest = acctInterest / 100;
+	acctInterest = acctInterest / 100;   // Math for calculating balance after applied interest & maturity term
 	acctMaturity = acctMaturity / 12;
 	interest = acctBalance * acctInterest * acctMaturity; // Equation to calculate interest
 	balance = acctBalance + interest; // Calculates total balance
