@@ -55,7 +55,7 @@ int main()
 	{
 		cout << "Enter your initial account balance (in $): ";
 		cin >> acctBalance;	// Store account balance input
-		cout << "Balance entered:[$" << acctBalance << "]" << endl << endl;
+		cout << "Balance entered:[$" << acctBalance << "]" << endl << endl;  // Verification
 		if (cin.fail())
 		{
 			// Checks that the balance entered is indeed a number
@@ -79,7 +79,7 @@ int main()
 	{
 		cout << "Enter the account interest rate (0-1000):";
 		cin >> acctInterest;	// Store account interest rate input
-		cout << "Interest rate entered:[" << acctInterest << "%]" << endl << endl;
+		cout << "Interest rate entered:[" << acctInterest << "%]" << endl << endl;   // Verification
 		if (cin.fail())
 		{
 			// Checks that the interest rate entered is indeed a number
@@ -103,7 +103,7 @@ int main()
 	{
 		cout << "Enter the number of months until maturity" << endl << "(Must be 12 or fewer months):";
 		cin >> acctMaturity;	// Take input for term
-		cout << "Term entered:[" << acctMaturity << " months]" << endl << endl;
+		cout << "Term entered:[" << acctMaturity << " months]" << endl << endl;   // Verification
 		if (cin.fail())
 		{
 			// Checks that the number of months entered is indeed a number
