@@ -1,50 +1,50 @@
 #ifndef BankCertificate_H
 #define BankCertificate_H
-
 #include <iostream>
 #include <limits>
-
 using namespace std;
 
-class CDAccount {
-
+class CDAccount
+{
 private:
-    string acctNumber;
-    const double balance, interestRate, maturityMonths;
+	string acctNumber;
+	const double acctBalance, acctInterest, acctMaturity;
 
 public:
-    CDAccount(string& acctNumber_, double& balance_, double& interestRate_, double& maturityMonths_) :
-        acctNumber(acctNumber_), 
-        balance(balance_),
-        interestRate(interestRate_),
-        maturityMonths(maturityMonths_)
-    {
-    }
-    ~CDAccount() = default;
+	CDAccount(string& acctNumber_, double& acctBalance_, double& acctInterest_, double& maturityMonths_) :
+		acctNumber(acctNumber_),
+		acctBalance(acctBalance_),
+		acctInterest(acctInterest_),
+		acctMaturity(maturityMonths_) {}
+	~CDAccount() = default;
 
-    double balanceAtMaturity() {
-        // balance * rate * term/12.0
-        
-        return balance * interestRate * maturityMonths / 12;
-    }
+	double getBalanceAtMaturity()
+	{
+		// balance *rate *term/12.0
 
-    // Get functions for the 4 properties
-    string getAcctNumber() {
-        return acctNumber;
-    }
+		return acctBalance;
+	}
 
-    double getBalance() {
-        return balance;
-    }
+	// Get functions for the 4 properties
+	string getAcctNumber()
+	{
+		return acctNumber;
+	}
 
-    double getInterestRate() {
-        return interestRate;
-    }
+	double getBalance()
+	{
+		return acctBalance;
+	}
 
-    double getMaturityMonths() {
-        return maturityMonths;
-    }
+	double getInterestRate()
+	{
+		return acctInterest;
+	}
 
+	double getMaturityMonths()
+	{
+		return acctMaturity;
+	}
 };
 
 #endif

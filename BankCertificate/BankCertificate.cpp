@@ -4,7 +4,7 @@
 #include "BankCertificate.h"
 using namespace std;
 
-bool isAllDigits(const string& s)
+bool isAllDigits(const string& s)	  // Iterate over string to find non-digit characters, credit StackOverflow - https://rb.gy/vpxxv3
 {
 	string::const_iterator it = s.begin();
 	while (it != s.end() && isdigit(*it)) ++it;
@@ -15,7 +15,7 @@ int main()
 {
 	string acctNumber;
 	int acctNumberInt;
-	double acctBalance, acctInterest, acctMaturity;
+	double acctBalance, acctInterest, acctMaturity, balance, interest;
 
 	// Account number section
 	while (true)
@@ -23,7 +23,7 @@ int main()
 		// Loop
 		cout << "Please enter your account number: ";
 		cin >> acctNumber;	// Store account balance input
-		cout << "Account # entered:[" << acctNumber << "]" << endl;
+		cout << "Account # entered:[" << acctNumber << "]" << endl << endl;
 		if (!isAllDigits(acctNumber))
 		{
 			cout << "Account number must only contain digits." << endl;
@@ -55,7 +55,7 @@ int main()
 	{
 		cout << "Enter your initial account balance (in $): ";
 		cin >> acctBalance;	// Store account balance input
-		cout << "Balance entered:[$" << acctBalance << "]" << endl;
+		cout << "Balance entered:[$" << acctBalance << "]" << endl << endl;
 		if (cin.fail())
 		{
 			// Checks that the balance entered is indeed a number
@@ -79,7 +79,7 @@ int main()
 	{
 		cout << "Enter the account interest rate (0-1000):";
 		cin >> acctInterest;	// Store account interest rate input
-		cout << "Interest rate entered:[" << acctInterest << "%]" << endl;
+		cout << "Interest rate entered:[" << acctInterest << "%]" << endl << endl;
 		if (cin.fail())
 		{
 			// Checks that the interest rate entered is indeed a number
@@ -124,12 +124,18 @@ int main()
 
 	CDAccount cd(acctNumber, acctBalance, acctInterest, acctMaturity);	// Constructing the CDAccount object
 
-	cout << "AccountNum:        " << cd.getAcctNumber() << endl;
-	cout << "Initial Balance:$  " << cd.getBalance() << endl;
-	cout << "Interest Rate:     " << cd.getInterestRate() << "%" << endl;
-	cout << "Maturity Balance:  " << cd.balanceAtMaturity() << endl;
-	cout << "Term:              " << cd.getMaturityMonths() << " months." << endl << endl;
-	cout << "When your CD matures in " << acctMaturity << " months, account #" << acctNumber << " will have a balance of $" << cd.balanceAtMaturity() << endl << endl;
+	cout << "Information Entered: " << endl << endl;
+	cout << "Account Number:      " << cd.getAcctNumber() << endl;
+	cout << "Initial Balance:$    " << cd.getBalance() << endl;
+	cout << "Interest Rate:       " << cd.getInterestRate() << "%" << endl;
+	cout << "Term:                " << cd.getMaturityMonths() << " months." << endl << endl;
+
+	acctInterest = acctInterest / 100;
+	acctMaturity = acctMaturity / 12;
+	interest = acctBalance * acctInterest * acctMaturity; // Equation to calculate interest
+	balance = acctBalance + interest; // Calculates total balance
+
+	cout << "When your CD matures in " << acctMaturity * 12 << " months, account #" << acctNumber << " will have a balance of $" << balance << endl << endl;
 	system("pause");	// Pause the window
 	return 0;
 }
