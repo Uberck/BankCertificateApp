@@ -19,7 +19,7 @@ int main() {
     double acctBalance, acctInterest, acctMaturity;
 
     // Account number section
-    while (true) {
+    while (true) {                                  // Loop
         cout << "Please enter your account number: ";
         cin >> acctNumber;                          // Store account balance input
         cout << "Account # entered: [" << acctNumber << "]" << endl;
@@ -44,8 +44,8 @@ int main() {
        break;
     }
    
+    // Account balance section
     while (true) {
-
         cout << "Enter your initial account balance (in $): ";
         cin >> acctBalance;                         // Store account balance input
         cout << "Balance entered: [$" << acctBalance << "]" << endl;
@@ -83,6 +83,7 @@ int main() {
         break;
     }
 
+    // Account term section
     while (true) {
         cout << "Enter the number of months until maturity" << endl << "(Must be 12 or fewer months):";
         cin >> acctMaturity;                        // Take input for term
@@ -108,9 +109,9 @@ int main() {
     cout << "Interest Rate:     " << cd.getInterestRate() << "%" << endl;
     cout << "Maturity Balance:  " << cd.balanceAtMaturity() << endl;
     cout << "Term:              " << cd.getMaturityMonths() << " months." << endl << endl;
-    cout << "When your CD matures in " << acctMaturity << " months, account #" << acctNumber << " will have a balance of $" << cd.balanceAtMaturity() << endl;
-
+    cout << "When your CD matures in " << acctMaturity << " months, account #" << acctNumber << " will have a balance of $" << cd.balanceAtMaturity() << endl << endl;
+    system("pause");                                                    // Pause the window
     return 0;
 }
 
-//  exit(8);
+//  exit(8);      // Exit program for debugging purposes

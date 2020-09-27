@@ -25,7 +25,7 @@ public:
     double balanceAtMaturity() {
         // balance * rate * term/12.0
         
-        return balance * interestRate * maturityMonths / 100;
+        return balance * interestRate * maturityMonths / 12;
     }
 
     // Get functions for the 4 properties
