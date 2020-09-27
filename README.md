@@ -1,7 +1,7 @@
 # BankCertificateApp
-C++ Console Program to calculate interest rate of CDAccount info entered by user
+C++ Console Program to calculate CD account balance after term based on info entered by user.
 
-![Sort Running](https://ch3302files.storage.live.com/y4mtMM6MS4E0ZArTjKND9bGguicla3meSvU50YY6k-cvpfqLMeFfKbOsIy0XP-1PM_W1yFFoA7TtVMbykXkAUSmFWETtlW9reWBC6OgqD5YlHpIo7v2oXhkLEYXo8fFSU1yhStjGABnmsFwAJWENWQVXEtElv6XXuru1yRRAyFNqVbYsRkcUkE2dNWlqYZe9RgC4WWHe8gncaNO8njMbQLEFA/output.jpg?psid=1&width=843&height=478)
+![Sort Running](https://ch3302files.storage.live.com/y4mnrQnN2MDZltQPsEKvDkJRnwl7R5IEpyHRodPdlBs_kUmEn5_SCP58TnCl8C4udSFskHKah4-00P4HkBmJkfuZFvqJ-hoN9gM1YPwayVI3TolrSDmCVOj8slUMkMblaggt9tum5DCdZy43szM-cuR_3cvRGWUNcwocNVJTPLJPUAcrDVhaf6RyagfgaEHyauF1wOzEx36AGnKhvKP3px2Ew/running.png?psid=1&width=954&height=433)
 
 @Uberck
 Commit new file
