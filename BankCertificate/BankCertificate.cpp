@@ -32,12 +32,12 @@ int main()
 
 		try
 		{
-			acctNumberInt = stoi(acctNumber);	// String to integer conversion
+			acctNumberInt = stoi(acctNumber);	// String to integer conversion, credit StackOverflow - https://rb.gy/8gs12f
 		}
 
 		catch (...)
 		{
-			cout << "Numeric conversion failed." << endl;    // String entered contains 
+			cout << "Numeric conversion failed." << endl;    // String entered contains digits
 			continue;
 		}
 
